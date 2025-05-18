@@ -223,4 +223,80 @@
   showSection('home');
   renderMessages();
   updateTime();
+
+
+
+  // ...existing code...
+document.querySelectorAll('.lesson-nav button').forEach(btn => {
+  btn.addEventListener('click', function() {
+    // Alle Lektionen ausblenden
+    document.querySelectorAll('.lesson-category').forEach(sec => sec.classList.remove('active'));
+    // Alle Buttons deaktivieren
+    document.querySelectorAll('.lesson-nav button').forEach(b => b.classList.remove('active'));
+    // Die gewünschte Lektion anzeigen
+    const target = this.getAttribute('data-target');
+    document.getElementById(target).classList.add('active');
+    this.classList.add('active');
+  });
+});
+
+// ...existing code...
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Kategorie-Karten Klick
+  document.querySelectorAll('#ti-course .category-card').forEach(card => {
+    card.addEventListener('click', function() {
+      // Übersicht ausblenden
+      document.querySelector('#ti-course .category-overview').style.display = 'none';
+      // Alle Kategorien ausblenden
+      document.querySelectorAll('#ti-course .lesson-category').forEach(sec => sec.style.display = 'none');
+      // Gewählte Kategorie anzeigen
+      const target = this.getAttribute('data-target');
+      const section = document.getElementById(target);
+      if(section) section.style.display = 'block';
+    });
+  });
+
+  // Zurück-Button Klick
+  document.querySelectorAll('#ti-course .back-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Übersicht anzeigen
+      document.querySelector('#ti-course .category-overview').style.display = 'flex';
+      // Alle Kategorien ausblenden
+      document.querySelectorAll('#ti-course .lesson-category').forEach(sec => sec.style.display = 'none');
+    });
+  });
+
+  // Optional: Beim Laden alle Kategorien ausblenden, nur Übersicht zeigen
+  document.querySelector('#ti-course .category-overview').style.display = 'flex';
+  document.querySelectorAll('#ti-course .lesson-category').forEach(sec => sec.style.display = 'none');
+});
+
+// Dummy-Funktion für Audio-Buttons
+function playAudio(word) {
+  alert('Audio for "' + word + '" is coming soon!');
+}
+
+// ...existing code...
+
+document.addEventListener('DOMContentLoaded', function() {
+  // ...dein anderer Code...
+
+  // Quiz-Logik
+  document.querySelectorAll('.quiz').forEach(quiz => {
+    quiz.querySelectorAll('.quiz-answer').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const feedback = quiz.querySelector('.quiz-feedback');
+        if (this.dataset.correct === "true") {
+          feedback.textContent = "✅ Richtig!";
+          feedback.style.color = "green";
+        } else {
+          feedback.textContent = "❌ Falsch! Versuche es nochmal.";
+          feedback.style.color = "red";
+        }
+      });
+    });
+  });
+});
+  
 })();
