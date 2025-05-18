@@ -695,6 +695,11 @@ input[type="text"] {
 #user-courses h3 {
   color: #0077cc;
 }
+#rec-btn {
+  border-radius: 45px;
+  color: black;
+  background-color: whitesmok;
+}
 /*SETTING PRIVACY*/
 .privacy-policy {
   background-color: #f9f9f9;
