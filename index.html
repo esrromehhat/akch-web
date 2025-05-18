@@ -125,38 +125,238 @@
       </li>
     </ul>
   </div>
-  <div class="lesson">
-    <h3>Lektion 2: animals</h3>
+   <section id="ti-course" tabindex="0" aria-label="Tigrinya Kurs">
+  <h2>📘 Tigrinya Course for Children</h2>
+  <p>Choose a category to explore and learn new words!</p>
+
+  <!-- Kategorie-Übersicht -->
+  <div class="category-overview">
+    <div class="category-card" data-target="lesson-animals">
+      <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Animals" />
+      <span>Animals</span>
+    </div>
+    <div class="category-card" data-target="lesson-park">
+      <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Park" />
+      <span>Park</span>
+    </div>
+    <div class="category-card" data-target="lesson-body">
+      <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Body" />
+      <span>Menschenkörper</span>
+    </div>
+    <div class="category-card" data-target="lesson-story">
+      <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" alt="Geschichte" />
+      <span>Kurs-Geschichte</span>
+    </div>
+    <div class="category-card" data-target="lesson-countries">
+      <img src="https://cdn-icons-png.flaticon.com/512/197/197484.png" alt="Länder" />
+      <span>Länder & Karte</span>
+    </div>
+    <div class="category-card" data-target="lesson-colors">
+      <img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png" alt="Farben" />
+      <span>Farben</span>
+    </div>
+  </div>
+
+  <!-- Animals -->
+  <div id="lesson-animals" class="lesson-category">
+    <button class="back-btn">← Zurück</button>
+    <h3>🐾 Tiere (Animals)</h3>
     <ul class="vocab-list">
       <li>
         <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Hund" />
         <span>Hund – ከልቢ (Kelbi)</span>
-     
+        <button onclick="playAudio('dog')">🔊</button>
       </li>
       <li>
         <img src="https://cdn-icons-png.flaticon.com/512/616/616430.png" alt="Katze" />
-        <span>cat – ዱሙ (Dumu)</span>
-        
-       
-
+        <span>Katze – ዱሙ (Dumu)</span>
+        <button onclick="playAudio('cat')">🔊</button>
+      </li>
+      <li>
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Pferd" />
+        <span>Pferd – ፈረስ (Feres)</span>
+        <button onclick="playAudio('horse')">🔊</button>
       </li>
     </ul>
-  </div>
-
-  <div class="lesson">
-    <h3>Lektion 3: Color</h3>
-    <ul class="vocab-list">
-      <li><span>Rot – ቀይሕ (Qeyh)</span> <button onclick="playAudio('red')">🔊</button></li>
-      <li><span>Blau – ሰማያዊ (Semayawi)</span> <button onclick="playAudio('blue')">🔊</button></li>
-    </ul>
-  </div>
-
-  <div class="quiz">
+    <p>Tipp: Klicke auf das Lautsprecher-Symbol, um das Wort zu hören!</p>
+    <!--Quiz-->
+    <div class="quiz">
     <h3>🧠 Mini-Quiz</h3>
-    <p>Was heißt "Katze" auf Tigrinya?</p>
-    <button onclick="alert('✅ Richtig!')">ዱሙ</button>
-    <button onclick="alert('❌ Falsch!')">ኣንበሳ</button>
+    <p>Was heißt "Hund" auf Tigrinya?</p>
+    <button class="quiz-answer" data-correct="true">ከልቢ</button>
+    <button class="quiz-answer" data-correct="false">ዱሙ</button>
+    <div class="quiz-feedback"></div>
   </div>
+  </div>
+
+  <!-- Park -->
+  <div id="lesson-park" class="lesson-category">
+    <button class="back-btn">← Zurück</button>
+    <h3>🏞️ Park (ባህርያ)</h3>
+    <ul class="vocab-list">
+      <li>
+        <img src="https://cdn-icons-png.flaticon.com/512/427/427735.png" alt="Baum" />
+        <span>Baum – ዛፍ (Zaf)</span>
+        <button onclick="playAudio('tree')">🔊</button>
+      </li>
+      <li>
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616554.png" alt="Blume" />
+        <span>Blume – አበባ (Abeba)</span>
+        <button onclick="playAudio('flower')">🔊</button>
+      </li>
+      <li>
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Bank" />
+        <span>Bank – አልጋ (Alga)</span>
+        <button onclick="playAudio('bench')">🔊</button>
+      </li>
+    </ul>
+    <p>Im Park kannst du viele Dinge entdecken und benennen!</p>
+    <!--Quiz-->
+    <div class="quiz">
+    <h3>🧠 Mini-Quiz</h3>
+    <p>Was heißt "Hund" auf Tigrinya?</p>
+    <button class="quiz-answer" data-correct="true">ከልቢ</button>
+    <button class="quiz-answer" data-correct="false">ዱሙ</button>
+    <div class="quiz-feedback"></div>
+  </div>
+  </div>
+
+  <!-- Menschenkörper -->
+  <div id="lesson-body" class="lesson-category">
+    <button class="back-btn">← Zurück</button>
+    <h3>🧍 Menschenkörper (ዓንቀጽ ሰብኣይ)</h3>
+    <ul class="vocab-list">
+      <li>
+        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Kopf" />
+        <span>Kopf – ርእሲ (Re’si)</span>
+        <button onclick="playAudio('head')">🔊</button>
+      </li>
+      <li>
+        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922522.png" alt="Hand" />
+        <span>Hand – ኢድ (Id)</span>
+        <button onclick="playAudio('hand')">🔊</button>
+      </li>
+      <li>
+        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922556.png" alt="Bein" />
+        <span>Bein – እግሪ (Egri)</span>
+        <button onclick="playAudio('leg')">🔊</button>
+      </li>
+    </ul>
+    <p>Lerne die Namen der Körperteile auf Tigrinya!</p>
+    <!--Quiz-->
+    <div class="quiz">
+    <h3>🧠 Mini-Quiz</h3>
+    <p>Was heißt "Hand" auf Tigrinya?</p>
+    <button class="quiz-answer" data-correct="true">ኢድ</button>
+    <button class="quiz-answer" data-correct="false">እግሪ</button>
+    <div class="quiz-feedback"></div>
+  </div>
+  </div>
+
+  <!-- Kurs-Geschichte -->
+  <div id="lesson-story" class="lesson-category">
+    <button class="back-btn">← Zurück</button>
+    <h3>📖 Kleine Geschichte</h3>
+    <div class="lesson">
+      <p>
+        Es war einmal ein kleiner Junge namens Sami, der in Eritrea lebte. Jeden Tag ging er mit seinem Hund Kelbi in den Park, um zu spielen. Dort traf er seine Freunde, pflückte Blumen und lernte neue Wörter auf Tigrinya. <br>
+        <strong>ቀይሕ አበባ (Qeyh Abeba)</strong> bedeutet "rote Blume". <br>
+        Sami liebte es, Geschichten zu hören und neue Dinge zu entdecken!
+      </p>
+    </div>
+    <p>Geschichten helfen dir, neue Wörter zu lernen!</p>
+    <!--Quiz-->
+    <div class="quiz">
+    <h3>🧠 Mini-Quiz</h3>
+    <p>Wie heißt der Junge in der Geschichte?</p>
+    <button class="quiz-answer" data-correct="true">Sami</button>
+    <button class="quiz-answer" data-correct="false">Musa</button>
+    <div class="quiz-feedback"></div>
+  </div>
+  </div>
+
+  <!-- Länder & Karte -->
+  <div id="lesson-countries" class="lesson-category">
+    <button class="back-btn">← Zurück</button>
+    <h3>🌍 Länder & Karte</h3>
+    <div class="lesson">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/LocationEritrea.svg" alt="Eritrea Karte" style="width:180px; border-radius:12px; margin-bottom:1rem;">
+      <ul class="vocab-list">
+        <li>
+          <img src="https://cdn-icons-png.flaticon.com/512/197/197484.png" alt="Eritrea" />
+          <span>Eritrea – ኤርትራ (Ertra)</span>
+        </li>
+        <li>
+          <img src="https://cdn-icons-png.flaticon.com/512/197/197374.png" alt="Deutschland" />
+          <span>Deutschland – ጀርመን (German)</span>
+        </li>
+        <li>
+          <img src="https://cdn-icons-png.flaticon.com/512/197/197386.png" alt="Äthiopien" />
+          <span>Äthiopien – ኢትዮጵያ (Ityop’iya)</span>
+        </li>
+      </ul>
+    </div>
+    <p>Hier siehst du, wo die Länder liegen und wie sie heißen.</p>
+    <!--Quiz-->
+     <div class="quiz">
+    <h3>🧠 Mini-Quiz</h3>
+    <p>Wie heißt "Deutschland" auf Tigrinya?</p>
+    <button class="quiz-answer" data-correct="true">ጀርመን</button>
+    <button class="quiz-answer" data-correct="false">ኤርትራ</button>
+    <div class="quiz-feedback"></div>
+  </div>
+  </div>
+
+  <!-- Farben -->
+  <div id="lesson-colors" class="lesson-category">
+    <button class="back-btn">← Zurück</button>
+    <h3>🎨 Farben</h3>
+    <ul class="vocab-list">
+      <li>
+        <span style="display:inline-block;width:24px;height:24px;background:#ff0000;border-radius:50%;margin-right:10px;"></span>
+        <span>Rot – ቀይሕ (Qeyh)</span>
+        <button onclick="playAudio('red')">🔊</button>
+      </li>
+      <li>
+        <span style="display:inline-block;width:24px;height:24px;background:#0000ff;border-radius:50%;margin-right:10px;"></span>
+        <span>Blau – ሰማያዊ (Semayawi)</span>
+        <button onclick="playAudio('blue')">🔊</button>
+      </li>
+      <li>
+        <span style="display:inline-block;width:24px;height:24px;background:#00ff00;border-radius:50%;margin-right:10px;"></span>
+        <span>Grün – አረንጓዴ (Arengwade)</span>
+        <button onclick="playAudio('green')">🔊</button>
+      </li>
+      <li>
+        <span style="display:inline-block;width:24px;height:24px;background:#ffff00;border-radius:50%;margin-right:10px;"></span>
+        <span>Gelb – ቢጫ (Bicha)</span>
+        <button onclick="playAudio('yellow')">🔊</button>
+      </li>
+      <li>
+        <span style="display:inline-block;width:24px;height:24px;background:#000000;border-radius:50%;margin-right:10px;"></span>
+        <span>Schwarz – ጸሊም (Tselim)</span>
+        <button onclick="playAudio('black')">🔊</button>
+      </li>
+      <li>
+        <span style="display:inline-block;width:24px;height:24px;background:#ffffff;border:1px solid #ccc;border-radius:50%;margin-right:10px;"></span>
+        <span>Weiß – ጻዕዳ (Tsa’ida)</span>
+        <button onclick="playAudio('white')">🔊</button>
+      </li>
+    </ul>
+    <p>Lerne die Farben auf Tigrinya!</p>
+    <!--Quiz-->
+      <div class="quiz">
+    <h3>🧠 Mini-Quiz</h3>
+    <p>Was heißt "Rot" auf Tigrinya?</p>
+    <button class="quiz-answer" data-correct="true">ቀይሕ</button>
+    <button class="quiz-answer" data-correct="false">ሰማያዊ</button>
+    <div class="quiz-feedback"></div>
+  </div>
+  </div>
+</section>
+ 
+
+
 
    <h2>📘 Tigrinya-Lessons for Kids</h2>
     <p>Create your own course with vocabulary, images, and audio.</p>
