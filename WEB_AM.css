@@ -420,81 +420,6 @@ section.active {
   text-align: center;
   font-size: 16px;
 }
-/* Profile */ /*
-#profile h2 {
-  color: #764ba2;
-  margin-bottom: 14px;
-  font-weight: 900;
-}
-#profile form {
-  display: flex;
-  flex-direction: column;
-  max-width: 480px;
-  margin: 0 auto;
-}
-#profile label {
-  margin: 10px 0 6px;
-  font-weight: 700;
-  font-size: 15px;
-  color: #503f7d;
-}
-#profile input[type="text"],
-#profile input[type="file"] {
-  padding: 12px 14px;
-  border-radius: 14px;
-  border: 1.8px solid #b3a6e6;
-  font-size: 16px;
-  transition: border-color 0.3s;
-}
-#profile input[type="text"]:focus,
-#profile input[type="file"]:focus {
-  outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 12px #667eeaaa;
-}
-#profile img.profile-pic {
-  width: 96px;
-  height: 96px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-top: 14px;
-  border: 4px solid #764ba2;
-  filter: drop-shadow(0 2px 4px #53387a88);
-  align-self: center;
-}
-#profile .progress-bar {
-  background: #dedcf9;
-  border-radius: 14px;
-  height: 20px;
-  margin-top: 18px;
-  overflow: hidden;
-  box-shadow:  inset 0 1px 4px #b2a9e4;
-}
-#profile .progress-bar-inner {
-  background: #667eea;
-  height: 20px;
-  width: 0%;
-  box-shadow: 0 0 14px #667eea88;
-  transition: width 0.6s cubic-bezier(0.4,0,0.2,1);
-}
-#profile .save-btn {
-  margin-top: 22px;
-  padding: 16px 0;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
-  border-radius: 24px;
-  font-weight: 900;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
-  transition: box-shadow 0.4s;
-  box-shadow: 0 5px 12px #5b52c4cc, 0 8px 24px #4c3fbaaa;
-}
-#profile .save-btn:hover,
-#profile .save-btn:focus {
-  box-shadow: 0 8px 16px #4c3fbab0,0 12px 30px #3e3388dd;
-  outline: none;
-} */ 
 /* kontakte*/
 section#Live {
   padding: 20px;
@@ -584,25 +509,69 @@ ul {
 li {
   margin: 15px 0;
 }
-/*Ti-course*/
-#ti-course {
-  padding: 2rem;
-  background: linear-gradient(135deg, #f2f7ff, #d2e3ff);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+
+/* Kategorie-Übersicht im Kurs */
+#ti-course .category-overview {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+#ti-course .category-card {
+  background: linear-gradient(135deg, #e0e7ff, #b2f7ef);
   border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 1000px;
-  margin: auto;
+  box-shadow: 0 2px 8px #b2b9c055;
+  padding: 1.2rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 140px;
 }
-#ti-course h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #003366;
+#ti-course .category-card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 0.7rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 8px #b2b9c055;
 }
-#ti-course p {
+#ti-course .category-card span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00509e;
+}
+#ti-course .category-card:hover,
+#ti-course .category-card:focus {
+  transform: scale(1.07);
+  box-shadow: 0 6px 18px #764ba2aa;
+  background: linear-gradient(135deg, #b2f7ef, #e0e7ff);
+}
+#ti-course .lesson-category {
+  display: none;
+  margin-top: 1.5rem;
+}
+#ti-course .lesson-category.active {
+  display: block;
+  animation: fadeIn 0.5s;
+}
+#ti-course .back-btn {
+  background: #e0f0ff;
+  color: #00509e;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.2rem;
   font-size: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+#ti-course .back-btn:hover {
+  background: #b2b9c0;
 }
 .lesson {
   margin-bottom: 2rem;
@@ -679,6 +648,23 @@ li {
 .quiz button:hover {
   background: #ffd966;
 }
+
+.lesson-category { display: none; }
+.lesson-category.active { display: block; }
+.lesson-nav button {
+  margin: 0 8px 12px 0;
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #5a3689;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+}
+.lesson-nav button.active {
+  background: #764ba2;
+}
+
 input[type="text"] {
   width: 100%;
   padding: 0.6rem;
