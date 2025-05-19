@@ -601,8 +601,8 @@ li {
   gap: 1rem;
 }
 .vocab-list img {
-  width: 20px;
-  height: 30px;
+  width: 50px;
+  height: 40px;
   object-fit: contain;
   border-radius: 50px;
   background-color: #723d19;
