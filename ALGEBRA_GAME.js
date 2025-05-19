@@ -445,16 +445,4 @@
   }
   initialize();
 
- // Funktion zum Zurückkehren zum Menü oder zur Startseite
-function goBack() {
-    // Wenn der Benutzer sich auf einem Spiel befindet, kehrt er zum Menü zurück
-    if (window.location.href.includes("math_game.html") || window.location.href.includes("memory_game.html")) {
-        window.location.href = "index.html"; // Geht zum Menü oder Startseite
-    } else {
-        window.history.back(); // Geht zur vorherigen Seite, falls man bereits auf der Startseite oder im Menü ist
-    }
-}
-
-
-  
 })();
