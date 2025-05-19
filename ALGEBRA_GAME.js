@@ -446,10 +446,8 @@
   initialize();
 
   function goBack() {
-    window.history.back(); // Zurück zur vorherigen Seite
-    // oder benutze die folgende Zeile, um zu einer festen Seite zurückzukehren:
-    // window.location.href = "deine-website-url.html"; // Beispiel für eine feste URL
-}
+    window.location.href = "index.html"; 
+  }
 
   
 })();
