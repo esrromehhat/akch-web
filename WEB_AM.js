@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-  function toggleAlphabet() {
+   function toggleAlphabet() {
       const section = document.getElementById("alphabetSection");
       const button = document.querySelector("button");
       if (section.style.display === "none") {
