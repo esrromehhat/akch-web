@@ -298,5 +298,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+  function toggleAlphabet() {
+      const section = document.getElementById("alphabetSection");
+      const button = document.querySelector("button");
+      if (section.style.display === "none") {
+        section.style.display = "block";
+        button.textContent = "Alphabet verstecken";
+      } else {
+        section.style.display = "none";
+        button.textContent = "Alphabet anzeigen";
+      }
+    }
   
 })();
